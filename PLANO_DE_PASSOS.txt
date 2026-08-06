@@ -1,0 +1,110 @@
+================================================================================
+ROTEIRO DE DESENVOLVIMENTO INDIVIDUAL COMPLETO: 9 ETAPAS DE EXECUÇÃO
+================================================================================
+
+Este guia consolida todos os passos necessários para que qualquer integrante 
+do grupo execute o projeto inteiro sozinho. Siga a sequência abaixo para 
+construir uma aplicação completa e pronta para portfólio.
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 1: Configuração do Ambiente e Controle de Versão (Setup)
+--------------------------------------------------------------------------------
+- 1.1. Garantir que o Python (3.10 ou superior) e o Git estejam instalados.
+- 1.2. Iniciar o repositório local Git (git init) e criar o repositório no GitHub.
+- 1.3. Criar e ativar um ambiente virtual Python (venv) no diretório do projeto.
+- 1.4. Instalar dependências (Pandas, Numpy, Scipy, Streamlit, Plotly, DuckDB, 
+       statsmodels) e salvar as versões em um arquivo "requirements.txt".
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 2: Coleta de Dados (Data Ingestion)
+--------------------------------------------------------------------------------
+- 2.1. Dados Agrícolas (Brasil): Consultar a API do IBGE SIDRA (Tabela 5457 - PAM)
+       para obter área colhida (ha), produção (t) e rendimento (kg/ha) para Soja,
+       Milho e Café.
+- 2.2. Dados Agrícolas (México): Baixar dados históricos municipais no portal do 
+       SIAP/Datos Abiertos para obter área, produção e rendimento de Milho, Feijão 
+       e Café.
+- 2.3. Dados Climáticos (Globais ou Locais): Coletar temperatura máxima diária (Tmax),
+       precipitação diária e evapotranspiração potencial para os municípios.
+       * Fontes Globais: API Copernicus CDS (ERA5-Land) ou API do NASA POWER.
+       * Fontes do Brasil: Estações automáticas/históricas do INMET (Instituto 
+         Nacional de Meteorologia) ou bases do CPTEC/INPE.
+       * Fontes do México: Estações do SMN (Servicio Meteorológico Nacional) ou 
+         portais da CONAGUA.
+- 2.4. Dados de Satélite (NDVI): Extrair a série histórica de NDVI (Índice de 
+       Vegetação) das regiões agrícolas através do Google Earth Engine (MODIS MOD13Q1).
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 3: Tratamento de Dados e Modelagem Espacial (ETL)
+--------------------------------------------------------------------------------
+- 3.1. Converter todas as produtividades para kg/ha (unificar bases Brasil e México).
+- 3.2. Alinhar os códigos de municípios do IBGE (7 dígitos) e INEGI (5 dígitos) e 
+       limpar caracteres especiais.
+- 3.3. Para dados climáticos em formato de grade (raster NetCDF), calcular a média 
+       de temperatura e chuva ponderada apenas pelas áreas de cultivo de cada município.
+- 3.4. Juntar as bases agrícola e climática em um dataframe único usando "Ano" e 
+       "Código do Município" como chaves.
+- 3.5. Remover ou interpolar valores nulos ou inconsistentes (produtividade zerada, 
+       dados faltantes).
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 4: Cálculo Integral (Acumulação Agrometeorológica)
+--------------------------------------------------------------------------------
+- 4.1. Modelar o calor acumulado (GDD) como a área sob a curva de temperatura que 
+       excede o limite basal da planta:
+       GDD = \int_{t_0}^{t_f} \max(0, T(t) - T_base) dt
+- 4.2. Programar o algoritmo da Regra de Simpson no Python para calcular numericamente 
+       o valor da integral a partir das temperaturas diárias.
+- 4.3. Adaptar a integral para calcular os graus-dia de estresse térmico extremo (HDD) 
+       quando a temperatura máxima diária exceder 35°C na fase crítica.
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 5: Cálculo Diferencial (Otimização de Rendimento)
+--------------------------------------------------------------------------------
+- 5.1. Ajustar uma curva polinomial de segundo grau relacionando a produtividade (Y) 
+       com o índice de seca (SPEI):
+       Y(SPEI) = a * SPEI^2 + b * SPEI + c
+- 5.2. Calcular a primeira derivada dY/dSPEI = 2a * SPEI + b, igualar a zero e 
+       resolver para achar o SPEI ótimo:
+       SPEI* = -b / 2a
+- 5.3. Calcular a segunda derivada d^2Y/dSPEI^2 = 2a. Se a < 0, comprovar que o 
+       ponto crítico é um Máximo Local (estabilidade hídrica ideal).
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 6: Equações Diferenciais (EDO de Crescimento)
+--------------------------------------------------------------------------------
+- 6.1. Definir a EDO de crescimento logístico (Verhulst) com restrição climática:
+       dY/dt = r(SPEI) * Y * (1 - Y / K(SPEI))
+- 6.2. Criar um loop numérico em Python para resolver a EDO dia a dia atualizando 
+       a biomassa pelo Método de Euler com passo dt = 1:
+       Y_{t+1} = Y_t + (dY/dt) * dt
+- 6.3. Alterar a taxa de crescimento r e o limite K baseando-se no índice SPEI 
+       do ano (secas severas reduzem r e K).
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 7: Desenvolvimento do Dashboard Interativo
+--------------------------------------------------------------------------------
+- 7.1. Criar o layout do app Streamlit com abas dedicadas para "Análise Histórica", 
+       "Visualização Climática" e "Modelagem Matemática (Cálculo)".
+- 7.2. Plotar gráficos interativos (Plotly) de evolução da produtividade e anomalias.
+- 7.3. Criar sliders de controle do clima (SPEI) conectados ao modelo EDO para que 
+       o usuário veja a curva de crescimento vegetal se achatar conforme a seca aumenta.
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 8: Testes Unitários e Validação de Código
+--------------------------------------------------------------------------------
+- 8.1. Escrever testes no pytest para verificar se a função da Regra de Simpson 
+       calcula a área de teste corretamente.
+- 8.2. Escrever testes para certificar que a resolução de Euler converge para a 
+       capacidade de suporte K na ausência de choques climáticos.
+- 8.3. Validar se o SPEI ótimo calculado maximiza de fato o valor da produtividade.
+
+--------------------------------------------------------------------------------
+[ ] ETAPA 9: Escrita do Relatório, Deploy e Portfólio
+--------------------------------------------------------------------------------
+- 9.1. Escrever o relatório final com a introdução, metodologia matemática aplicada, 
+       discussões sobre as políticas agrícolas Brasil/México e conclusões.
+- 9.2. Publicar o dashboard Streamlit na nuvem (Streamlit Cloud).
+- 9.3. Documentar o README do GitHub com badges, imagens do dashboard e instruções 
+       claras de instalação.
+================================================================================

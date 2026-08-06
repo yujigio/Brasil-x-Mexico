@@ -1,0 +1,60 @@
+================================================================================
+GUIA DE SEGURANÇA GIT: COMMITS E PUSHES EM COMPUTADORES PÚBLICOS
+================================================================================
+
+Programar em computadores de laboratórios públicos exige cuidados extras de 
+segurança para não deixar suas credenciais do GitHub salvas na máquina de 
+terceiros. Veja os caminhos seguros para configurar o Git, commitar e dar push.
+
+--------------------------------------------------------------------------------
+1. COMO FAZER COMMITS LOCAIS COM SEGURANÇA (SEM CONFIGURAÇÃO GLOBAL)
+--------------------------------------------------------------------------------
+Para fazer commits locais, o Git exige apenas um nome e um e-mail. Em computadores 
+públicos, NUNCA use a flag "--global". Use a flag "--local" para gravar os dados 
+apenas dentro da pasta do projeto atual.
+
+Abra o terminal do projeto na faculdade e digite:
+
+  git config --local user.name "Seu Nome Completo"
+  git config --local user.email "seu_email_do_github@email.com"
+
+Agora você pode fazer commits locais sem expor sua senha na internet:
+
+  git add .
+  git commit -m "Mensagem do meu commit"
+
+Essas credenciais serão esquecidas ao desligar ou reiniciar o computador do lab.
+
+--------------------------------------------------------------------------------
+2. COMO ENVIAR (PUSH) PARA O GITHUB SEM DEIXAR CREDENCIAIS SALVAS
+--------------------------------------------------------------------------------
+Para mandar suas alterações locais para o servidor do GitHub com segurança:
+
+MÉTODO A: Usar o GitHub Codespaces (O mais fácil e recomendado)
+   - Ao programar pelo Codespaces direto no navegador, a máquina virtual já 
+     está autenticada com a sua conta por trás do browser.
+   - Você roda apenas os comandos de push normais:
+     git add .
+     git commit -m "Atualizando"
+     git push origin main
+   - Não é necessário digitar usuário, senha ou tokens. Ao sair do site do 
+     GitHub e fechar a aba, nenhuma senha fica salva no PC.
+
+MÉTODO B: Desativar a gravação automática de senhas no PC local
+   Se estiver usando o Git pelo terminal do computador do laboratório:
+   1. Digite o comando para desligar a memória de credenciais:
+      git config --global credential.helper ""
+   2. Crie um Token de Acesso (Personal Access Token - PAT) no painel de 
+      configurações do GitHub (Settings -> Developer settings -> Tokens).
+   3. Ao dar "git push", digite seu usuário e use o Token no lugar da senha.
+   4. Como desligamos o helper, o PC não salvará seu Token quando fechar o terminal.
+
+MÉTODO C: Upload manual pelo site do GitHub (Sem terminal)
+   Se o aluno tem muita dificuldade com o Git no terminal:
+   1. Entre na conta do GitHub pelo navegador da faculdade.
+   2. No repositório, clique em "Add file" -> "Upload files".
+   3. Arraste e solte seus arquivos modificados.
+   4. Escreva a mensagem de alteração e confirme o commit.
+   5. IMPORTANTE: Lembre-se de clicar em "Sign Out" (Sair) da sua conta do 
+      GitHub no site antes de ir embora do laboratório.
+================================================================================

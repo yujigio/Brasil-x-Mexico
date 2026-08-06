@@ -1,51 +1,51 @@
-# Estrutura do Repositório Sugerida (Desenvolvimento Individual)
+# Arquitetura e Estrutura / Arquitectura y Estructura
+## 📁 Projeto Colaborativo Internacional Brasil-México
 
-Para organizar o desenvolvimento do seu projeto completo, crie as pastas e arquivos abaixo seguindo a hierarquia padrão:
+Especificação técnica de diretórios, banco de dados e engenharia de software implementada neste repositório.
+
+---
+
+### 1. ÁRVORE DE DIRETÓRIOS / ÁRBOL DE DIRECTORIOS
 
 ```text
-projeto-calculo-individual/
+serene-bohr/
 ├── data/
-│   ├── raw/                 # Onde você colocará as tabelas brutas baixadas do IBGE/INEGI
-│   └── processed/           # Onde você salvará as tabelas tratadas e combinadas no Pandas
+│   ├── raw/                 # Dados brutos das APIs (IBGE, SIAP, NASA) / Datos brutos
+│   └── processed/           # Tabelas tratadas e consolidadas (.parquet / .csv) / Datos procesados
 ├── src/
 │   ├── data_etl/
-│   │   ├── api_fetcher.py   # Seu script para carregar e unificar os dados agrícolas e climáticos
-│   │   └── integrator.py    # Sua função de cálculo de GDD (Integral via Simpson)
+│   │   ├── api_fetcher.py   # Ingestão agrícola e meteorológica / Ingestión de datos
+│   │   └── integrator.py    # Integração de GDD (Regra de Simpson) / Integración de GDD
 │   ├── models/
-│   │   ├── optimization.py  # Sua função de otimização (Derivadas de 1ª e 2ª ordem)
-│   │   └── ode_solver.py    # Seu script do loop de crescimento vegetal (EDO via Euler)
+│   │   ├── optimization.py  # Derivadas de otimização de rendimento / Optimización de rendimiento
+│   │   └── ode_solver.py    # Resolução de EDO de Verhulst (Euler) / Solución de EDO
 │   └── dashboard/
-│       └── app.py           # Seu aplicativo Streamlit interativo unificando tudo
-├── README.md                # Apresentação do seu repositório GitHub
-├── PROJETO_DE_PESQUISA.md    # Seu roteiro conceitual e referências de escrita
-└── ROTEIRO_DE_DESENVOLVIMENTO_INDIVIDUAL.md # Seu workbook passo a passo
+│       └── app.py           # Interface web Streamlit (Bilíngue) / Panel web interactivo
+├── README.md                # Apresentação do repositório / Presentación
+├── MATHEMATICAL_MODELS.md   # Modelagem matemática detalhada / Modelado matemático
+├── ESTRUTURA_DO_PROJETO.md  # Arquitetura do software / Arquitectura de software
+└── requirements.txt         # Pacotes Python e dependências / Dependencias
 ```
 
 ---
 
-## 🛠️ Passos Recomendados para Iniciar o Desenvolvimento
+### 2. ESQUEMA DO BANCO DE DADOS HÍBRIDO (PARQUET)
+### 2. ESQUEMA DE LA BASE DE DATOS HÍBRIDA (PARQUET)
 
-1. **Criação da Árvore de Diretórios**:
-   Abra o terminal na pasta do projeto e crie as pastas de código e dados com:
-   ```bash
-   mkdir -p data/raw data/processed src/data_etl src/models src/dashboard
-   ```
+A base final unificada (`data/processed/painel_agro_climatico_consolidado.parquet`) possui a seguinte estrutura de colunas:
 
-2. **Criação dos Arquivos de Script**:
-   Crie os arquivos vazios (comentados) em cada pasta para mapear o seu desenvolvimento:
-   * Em `src/data_etl/integrator.py`, adicione o comentário:
-     ```python
-     # TODO: Implementar a Regra de Simpson para integrar dados de temperatura (GDD)
-     ```
-   * Em `src/models/optimization.py`, adicione:
-     ```python
-     # TODO: Implementar cálculo de SPEI ótimo resolvendo a derivada dY/dSPEI = 0
-     ```
-   * Em `src/models/ode_solver.py`, adicione:
-     ```python
-     # TODO: Implementar o Método de Euler para resolver a EDO dY/dt
-     ```
-   * Em `src/dashboard/app.py`, adicione:
-     ```python
-     # TODO: Montar o Streamlit contendo filtros, gráficos da EDO e simulador
-     ```
+| Coluna / Columna | Tipo | Descrição / Descripción (PT) | Descripción (ES) |
+| :--- | :--- | :--- | :--- |
+| `pais` | `VARCHAR` | Identificador do País ('Brasil' ou 'Mexico') | Identificador del País |
+| `ano` | `INTEGER` | Ano da Safra Agrícola (2000–2024) | Año de la Cosecha |
+| `codigo_municipio` | `VARCHAR` | Código geográfico regional | Código geográfico regional |
+| `nome_municipio` | `VARCHAR` | Nome do Município | Nombre del Municipio |
+| `uf_estado` | `VARCHAR` | Estado / Entidade Federativa | Estado / Entidad Federativa |
+| `cultura` | `VARCHAR` | Cultura agrícola analisada | Cultivo analizado |
+| `area_colhida_ha` | `DOUBLE` | Área colhida em hectares | Área cosechada en hectáreas |
+| `producao_toneladas`| `DOUBLE` | Produção total em toneladas | Producción total en toneladas |
+| `produtividade_kg_ha`| `DOUBLE` | Rendimento físico agrícola ($kg/ha$) | Rendimiento físico agrícola ($kg/ha$) |
+| `spei_3m` | `DOUBLE` | Índice de Seca SPEI (3 meses) | Índice de Sequía SPEI (3 meses) |
+| `dias_estresse_termico_hdd`| `INTEGER`| Dias de estresse térmico ($T_{max} > 35^\circ C$) | Días de estrés térmico ($T_{max} > 35^\circ C$) |
+| `ndvi_anomalia` | `DOUBLE` | Anomalia padronizada de NDVI MODIS | Anomalía estandarizada de NDVI MODIS |
+| `precipitacao_acumulada_mm`| `DOUBLE`| Precipitação sazonal acumulada (mm) | Precipitación estacional acumulada (mm) |

@@ -1,4 +1,4 @@
-# 🌾 Cálculo Intercultural: Conexões Agrícolas & Climáticas Brasil-México
+﻿# 🌾 Cálculo Intercultural: Conexões Agrícolas & Climáticas Brasil-México
 
 Este repositório contém o projeto acadêmico desenvolvido para a disciplina de **Cálculo** dentro do **Projeto Colaborativo Internacional "Cálculo intercultural: construyendo conexiones Brasil y México"** (parceria entre a **Fatec Ourinhos** e a **Universidad Anáhuac Puebla**, México).
 
@@ -9,14 +9,6 @@ O objetivo principal é aplicar conceitos de **Cálculo Diferencial, Integral e 
 ## ☁️ Filosofia do Projeto: 100% na Nuvem
 
 Este projeto foi desenhado sob a premissa de **inclusão digital e acessibilidade**, sendo executado **inteiramente de forma virtual e na nuvem**. Qualquer estudante consegue clonar, tratar dados, programar as equações matemáticas e colocar o dashboard online diretamente pelo navegador (Google Chrome, Edge, Safari), sem a necessidade de instalar programas localmente ou de dispor de um computador pessoal potente.
-
-```mermaid
-flowchart LR
-    A[Coleta de Dados] -->|IBGE & SIAP| B[Codespaces]
-    C[Modelagem Agrometeorológica] -->|Google Colab| B
-    B -->|Streamlit App| D[Deploy na Nuvem]
-    style B fill:#3B82F6,stroke:#1D4ED8,stroke-width:2px,color:#fff
-```
 
 ---
 
@@ -48,8 +40,8 @@ Simulamos o crescimento diário de biomassa da planta (Y) no tempo (t) usando a 
 A aplicação visual permite que qualquer usuário experimente a matemática de forma aplicada:
 * **Aba 1: Histórico Comparativo**: Comparação visual das safras de Brasil e México.
 * **Aba 2: Roteiro Agrometeorológico**: Dados climáticos e de NDVI em gráficos temporais.
-* **Aba 3: Otimização Diferencial**: Gráfico interativo com a reta tangente no ponto de derivada nula ($\frac{dY}{dSPEI} = 0$).
-* **Aba 4: Simulador da EDO**: Sliders interativos para ajustar a seca ($SPEI$) e ver a curva de crescimento da planta se achatar ou acelerar instantaneamente.
+* **Aba 3: Otimização Diferencial**: Gráfico interativo com a reta tangente no ponto de derivada nula (dY/dSPEI = 0).
+* **Aba 4: Simulador da EDO**: Sliders interativos para ajustar a seca (SPEI) e ver a curva de crescimento da planta se achatar ou acelerar instantaneamente.
 
 ---
 

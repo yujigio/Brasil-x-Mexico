@@ -1,0 +1,98 @@
+name: Deploy Observatorio Agroclimatico to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Automated QA, Model Validation & Data Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "requirements.txt"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute Mathematical & Unit Test Suite
+        run: |
+          python tests/run_tests.py
+
+      - name: Execute End-to-End (E2E) Test Suite
+        run: |
+          python e2e_tests/run_e2e_tests.py
+
+      - name: Assert Critical Portfolio Artifacts & Relational Data Integrity
+        run: |
+          python -c "
+          import os, pandas as pd
+
+          # Assert existence of critical portfolio files
+          critical_files = [
+              'index.html',
+              'painel_agroclimatico_brasil_mexico.csv',
+              'observatorio_agroclimatico_brasil_mexico.ipynb',
+              'assets/apresentacao_brasil_mexico_pt.pdf',
+              'assets/relatorio_contaminacion_brasil.pdf',
+              'RELATORIO_ACADEMICO_BRASIL_MEXICO.md',
+              'README.md'
+          ]
+          for fpath in critical_files:
+              assert os.path.exists(fpath), f'Critical artifact missing: {fpath}'
+              print(f'[OK] Verified existence: {fpath}')
+
+          # Assert relational integrity of authoritative dataset
+          csv_path = 'painel_agroclimatico_brasil_mexico.csv'
+          df = pd.read_csv(csv_path)
+          assert len(df) == 250, f'Expected 250 rows in dataset, got {len(df)}'
+          dup_pks = df[['pais', 'ano', 'cultura']].duplicated().sum()
+          assert dup_pks == 0, f'Found {dup_pks} duplicate primary keys (pais, ano, cultura)!'
+          total_nulls = df.isnull().sum().sum()
+          assert total_nulls == 0, f'Found {total_nulls} null values in dataset!'
+          print(f'[OK] Relational integrity verified: {len(df)} rows, 0 duplicates, 0 nulls.')
+          "
+
+  deploy:
+    name: GitHub Pages Static Deployment
+    needs: test
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Pages Configuration
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

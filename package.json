@@ -1,0 +1,33 @@
+{
+  "name": "serene-bohr",
+  "version": "1.0.0",
+  "description": "[![Streamlit App](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B.svg)](src/dashboard/app.py) [![Bilingual](https://img.shields.io/badge/Language-Bilingual--PT--ES-blue.svg)](#) [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fetch-data": "node server/fetch_data.js",
+    "server": "node server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujigio/Brasil-x-Mexico.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yujigio/Brasil-x-Mexico/issues"
+  },
+  "homepage": "https://github.com/yujigio/Brasil-x-Mexico#readme",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.1.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lucide-react": "^1.33.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "vite": "^8.2.2"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+.env
+__pycache__/
+*.pyc
+builder.py
+gen.py
+make_app.py
+test.txt
+write_helper.py
+writer.py
+
+data/

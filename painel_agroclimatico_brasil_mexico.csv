@@ -1,0 +1,251 @@
+pais,ano,cultura,produtividade_kg_ha,precipitacao_mm,spei_3m,temp_media,status_clima
+Brasil,2000,Soja,2450.4,1370,0.4,24.7,Normal
+Brasil,2000,Milho 1ª Safra,3276.8,1370,0.4,24.7,Normal
+Brasil,2000,Milho 2ª Safra,2781.0,1370,0.4,24.7,Normal
+Brasil,2000,Café,1119.8,1370,0.4,24.7,Normal
+Brasil,2000,Cana-de-Açúcar,68612.0,1370,0.4,24.7,Normal
+Mexico,2000,Maíz Blanco,2560.6,620,-1.5,22.1,Seca Moderada
+Mexico,2000,Maíz Amarillo,3155.2,620,-1.5,22.1,Seca Moderada
+Mexico,2000,Frijol,584.2,620,-1.5,22.1,Seca Moderada
+Mexico,2000,Café,890.2,620,-1.5,22.1,Seca Moderada
+Mexico,2000,Caña de Azúcar,69084.0,620,-1.5,22.1,Seca Moderada
+Brasil,2001,Soja,2419.3,1490,-0.2,24.93,Normal
+Brasil,2001,Milho 1ª Safra,3225.8,1490,-0.2,24.93,Normal
+Brasil,2001,Milho 2ª Safra,2743.2,1490,-0.2,24.93,Normal
+Brasil,2001,Café,1114.9,1490,-0.2,24.93,Normal
+Brasil,2001,Cana-de-Açúcar,67992.7,1490,-0.2,24.93,Normal
+Mexico,2001,Maíz Blanco,2799.5,705,-0.25,22.04,Normal
+Mexico,2001,Maíz Amarillo,3408.6,705,-0.25,22.04,Normal
+Mexico,2001,Frijol,648.9,705,-0.25,22.04,Normal
+Mexico,2001,Café,954.9,705,-0.25,22.04,Normal
+Mexico,2001,Caña de Azúcar,71762.3,705,-0.25,22.04,Normal
+Brasil,2002,Soja,2503.1,1610,0.1,24.76,Normal
+Brasil,2002,Milho 1ª Safra,3350.0,1610,0.1,24.76,Normal
+Brasil,2002,Milho 2ª Safra,2891.5,1610,0.1,24.76,Normal
+Brasil,2002,Café,1155.2,1610,0.1,24.76,Normal
+Brasil,2002,Cana-de-Açúcar,68754.4,1610,0.1,24.76,Normal
+Mexico,2002,Maíz Blanco,2880.0,775,0.0,21.87,Normal
+Mexico,2002,Maíz Amarillo,3500.0,775,0.0,21.87,Normal
+Mexico,2002,Frijol,670.0,775,0.0,21.87,Normal
+Mexico,2002,Café,980.0,775,0.0,21.87,Normal
+Mexico,2002,Caña de Azúcar,72500.0,775,0.0,21.87,Normal
+Brasil,2003,Soja,2588.2,1730,0.4,24.99,Normal
+Brasil,2003,Milho 1ª Safra,3476.5,1730,0.4,24.99,Normal
+Brasil,2003,Milho 2ª Safra,3043.7,1730,0.4,24.99,Normal
+Brasil,2003,Café,1196.2,1730,0.4,24.99,Normal
+Brasil,2003,Cana-de-Açúcar,69520.1,1730,0.4,24.99,Normal
+Mexico,2003,Maíz Blanco,2961.6,845,0.25,22.11,Normal
+Mexico,2003,Maíz Amarillo,3592.6,845,0.25,22.11,Normal
+Mexico,2003,Frijol,691.5,845,0.25,22.11,Normal
+Mexico,2003,Café,1005.4,845,0.25,22.11,Normal
+Mexico,2003,Caña de Azúcar,73241.1,845,0.25,22.11,Normal
+Brasil,2004,Soja,2262.1,1250,-1.6,25.1,Seca Severa
+Brasil,2004,Milho 1ª Safra,2972.8,1250,-1.6,25.1,Seca Severa
+Brasil,2004,Milho 2ª Safra,2505.0,1250,-1.6,25.1,Seca Severa
+Brasil,2004,Café,1073.3,1250,-1.6,25.1,Seca Severa
+Brasil,2004,Cana-de-Açúcar,65546.2,1250,-1.6,25.1,Seca Severa
+Mexico,2004,Maíz Blanco,2917.8,635,-0.25,21.94,Normal
+Mexico,2004,Maíz Amarillo,3556.8,635,-0.25,21.94,Normal
+Mexico,2004,Frijol,678.4,635,-0.25,21.94,Normal
+Mexico,2004,Café,999.4,635,-0.25,21.94,Normal
+Mexico,2004,Caña de Azúcar,72507.2,635,-0.25,21.94,Normal
+Brasil,2005,Soja,2261.2,1190,-1.8,25.4,Seca Severa
+Brasil,2005,Milho 1ª Safra,2966.6,1190,-1.8,25.4,Seca Severa
+Brasil,2005,Milho 2ª Safra,2506.2,1190,-1.8,25.4,Seca Severa
+Brasil,2005,Café,1079.5,1190,-1.8,25.4,Seca Severa
+Brasil,2005,Cana-de-Açúcar,65371.7,1190,-1.8,25.4,Seca Severa
+Mexico,2005,Maíz Blanco,3000.0,705,0.0,22.18,Normal
+Mexico,2005,Maíz Amarillo,3650.0,705,0.0,22.18,Normal
+Mexico,2005,Frijol,700.0,705,0.0,22.18,Normal
+Mexico,2005,Café,1025.0,705,0.0,22.18,Normal
+Mexico,2005,Caña de Azúcar,73250.0,705,0.0,22.18,Normal
+Brasil,2006,Soja,2726.1,1610,0.4,24.88,Normal
+Brasil,2006,Milho 1ª Safra,3676.2,1610,0.4,24.88,Normal
+Brasil,2006,Milho 2ª Safra,3306.3,1610,0.4,24.88,Normal
+Brasil,2006,Café,1272.5,1610,0.4,24.88,Normal
+Brasil,2006,Cana-de-Açúcar,70428.2,1610,0.4,24.88,Normal
+Mexico,2006,Maíz Blanco,3083.3,775,0.25,22.01,Normal
+Mexico,2006,Maíz Amarillo,3744.4,775,0.25,22.01,Normal
+Mexico,2006,Frijol,722.0,775,0.25,22.01,Normal
+Mexico,2006,Café,1050.9,775,0.25,22.01,Normal
+Mexico,2006,Caña de Azúcar,73996.1,775,0.25,22.01,Normal
+Brasil,2007,Soja,2686.5,1730,-0.2,25.11,Normal
+Brasil,2007,Milho 1ª Safra,3611.1,1730,-0.2,25.11,Normal
+Brasil,2007,Milho 2ª Safra,3245.6,1730,-0.2,25.11,Normal
+Brasil,2007,Café,1263.5,1730,-0.2,25.11,Normal
+Brasil,2007,Cana-de-Açúcar,69784.6,1730,-0.2,25.11,Normal
+Mexico,2007,Maíz Blanco,3036.1,845,-0.25,22.25,Normal
+Mexico,2007,Maíz Amarillo,3705.0,845,-0.25,22.25,Normal
+Mexico,2007,Frijol,707.9,845,-0.25,22.25,Normal
+Mexico,2007,Café,1043.9,845,-0.25,22.25,Normal
+Mexico,2007,Caña de Azúcar,73252.2,845,-0.25,22.25,Normal
+Brasil,2008,Soja,2774.5,1370,0.1,24.94,Normal
+Brasil,2008,Milho 1ª Safra,3742.3,1370,0.1,24.94,Normal
+Brasil,2008,Milho 2ª Safra,3405.4,1370,0.1,24.94,Normal
+Brasil,2008,Café,1305.8,1370,0.1,24.94,Normal
+Brasil,2008,Cana-de-Açúcar,70558.4,1370,0.1,24.94,Normal
+Mexico,2008,Maíz Blanco,3120.0,635,0.0,22.08,Normal
+Mexico,2008,Maíz Amarillo,3800.0,635,0.0,22.08,Normal
+Mexico,2008,Frijol,730.0,635,0.0,22.08,Normal
+Mexico,2008,Café,1070.0,635,0.0,22.08,Normal
+Mexico,2008,Caña de Azúcar,74000.0,635,0.0,22.08,Normal
+Brasil,2009,Soja,2863.9,1490,0.4,25.17,Normal
+Brasil,2009,Milho 1ª Safra,3875.8,1490,0.4,25.17,Normal
+Brasil,2009,Milho 2ª Safra,3569.0,1490,0.4,25.17,Normal
+Brasil,2009,Café,1348.8,1490,0.4,25.17,Normal
+Brasil,2009,Cana-de-Açúcar,71336.3,1490,0.4,25.17,Normal
+Mexico,2009,Maíz Blanco,2670.1,590,-1.7,22.5,Seca Severa
+Mexico,2009,Maíz Amarillo,3347.3,590,-1.7,22.5,Seca Severa
+Mexico,2009,Frijol,604.1,590,-1.7,22.5,Seca Severa
+Mexico,2009,Café,961.0,590,-1.7,22.5,Seca Severa
+Mexico,2009,Caña de Azúcar,68797.1,590,-1.7,22.5,Seca Severa
+Brasil,2010,Soja,2820.1,1610,-0.2,25.0,Normal
+Brasil,2010,Milho 1ª Safra,3803.8,1610,-0.2,25.0,Normal
+Brasil,2010,Milho 2ª Safra,3496.8,1610,-0.2,25.0,Normal
+Brasil,2010,Café,1337.8,1610,-0.2,25.0,Normal
+Brasil,2010,Cana-de-Açúcar,70680.5,1610,-0.2,25.0,Normal
+Mexico,2010,Maíz Blanco,3154.4,775,-0.25,22.15,Normal
+Mexico,2010,Maíz Amarillo,3853.2,775,-0.25,22.15,Normal
+Mexico,2010,Frijol,737.3,775,-0.25,22.15,Normal
+Mexico,2010,Café,1088.5,775,-0.25,22.15,Normal
+Mexico,2010,Caña de Azúcar,73997.1,775,-0.25,22.15,Normal
+Brasil,2011,Soja,2910.2,1730,0.1,25.23,Normal
+Brasil,2011,Milho 1ª Safra,3938.5,1730,0.1,25.23,Normal
+Brasil,2011,Milho 2ª Safra,3662.3,1730,0.1,25.23,Normal
+Brasil,2011,Café,1381.2,1730,0.1,25.23,Normal
+Brasil,2011,Cana-de-Açúcar,71460.4,1730,0.1,25.23,Normal
+Mexico,2011,Maíz Blanco,2530.8,510,-2.4,22.8,Seca Severa
+Mexico,2011,Maíz Amarillo,3221.9,510,-2.4,22.8,Seca Severa
+Mexico,2011,Frijol,563.0,510,-2.4,22.8,Seca Severa
+Mexico,2011,Café,935.2,510,-2.4,22.8,Seca Severa
+Mexico,2011,Caña de Azúcar,66999.9,510,-2.4,22.8,Seca Severa
+Brasil,2012,Soja,2464.6,1100,-2.1,25.6,Seca Severa
+Brasil,2012,Milho 1ª Safra,3244.5,1100,-2.1,25.6,Seca Severa
+Brasil,2012,Milho 2ª Safra,2860.7,1100,-2.1,25.6,Seca Severa
+Brasil,2012,Café,1206.0,1100,-2.1,25.6,Seca Severa
+Brasil,2012,Cana-de-Açúcar,66638.1,1100,-2.1,25.6,Seca Severa
+Mexico,2012,Maíz Blanco,2651.8,540,-2.1,22.6,Seca Severa
+Mexico,2012,Maíz Amarillo,3354.9,540,-2.1,22.6,Seca Severa
+Mexico,2012,Frijol,595.4,540,-2.1,22.6,Seca Severa
+Mexico,2012,Café,970.5,540,-2.1,22.6,Seca Severa
+Mexico,2012,Caña de Azúcar,68196.0,540,-2.1,22.6,Seca Severa
+Brasil,2013,Soja,2953.7,1490,-0.2,25.29,Normal
+Brasil,2013,Milho 1ª Safra,3996.5,1490,-0.2,25.29,Normal
+Brasil,2013,Milho 2ª Safra,3747.9,1490,-0.2,25.29,Normal
+Brasil,2013,Café,1412.2,1490,-0.2,25.29,Normal
+Brasil,2013,Cana-de-Açúcar,71576.4,1490,-0.2,25.29,Normal
+Mexico,2013,Maíz Blanco,3272.7,705,-0.25,22.45,Normal
+Mexico,2013,Maíz Amarillo,4001.4,705,-0.25,22.45,Normal
+Mexico,2013,Frijol,766.8,705,-0.25,22.45,Normal
+Mexico,2013,Café,1133.0,705,-0.25,22.45,Normal
+Mexico,2013,Caña de Azúcar,74742.1,705,-0.25,22.45,Normal
+Brasil,2014,Soja,3045.9,1610,0.1,25.12,Normal
+Brasil,2014,Milho 1ª Safra,4134.7,1610,0.1,25.12,Normal
+Brasil,2014,Milho 2ª Safra,3919.2,1610,0.1,25.12,Normal
+Brasil,2014,Café,1456.5,1610,0.1,25.12,Normal
+Brasil,2014,Cana-de-Açúcar,72362.5,1610,0.1,25.12,Normal
+Mexico,2014,Maíz Blanco,3360.0,775,0.0,22.29,Normal
+Mexico,2014,Maíz Amarillo,4100.0,775,0.0,22.29,Normal
+Mexico,2014,Frijol,790.0,775,0.0,22.29,Normal
+Mexico,2014,Café,1160.0,775,0.0,22.29,Normal
+Mexico,2014,Caña de Azúcar,75500.0,775,0.0,22.29,Normal
+Brasil,2015,Soja,2672.5,1220,-1.7,25.9,Seca Severa
+Brasil,2015,Milho 1ª Safra,3550.4,1220,-1.7,25.9,Seca Severa
+Brasil,2015,Milho 2ª Safra,3231.7,1220,-1.7,25.9,Seca Severa
+Brasil,2015,Café,1309.5,1220,-1.7,25.9,Seca Severa
+Brasil,2015,Cana-de-Açúcar,68432.8,1220,-1.7,25.9,Seca Severa
+Mexico,2015,Maíz Blanco,3448.5,845,0.25,22.52,Normal
+Mexico,2015,Maíz Amarillo,4199.8,845,0.25,22.52,Normal
+Mexico,2015,Frijol,813.5,845,0.25,22.52,Normal
+Mexico,2015,Café,1187.3,845,0.25,22.52,Normal
+Mexico,2015,Caña de Azúcar,76261.3,845,0.25,22.52,Normal
+Brasil,2016,Soja,2663.5,1180,-1.9,25.8,Seca Severa
+Brasil,2016,Milho 1ª Safra,3531.1,1180,-1.9,25.8,Seca Severa
+Brasil,2016,Milho 2ª Safra,3211.5,1180,-1.9,25.8,Seca Severa
+Brasil,2016,Café,1311.9,1180,-1.9,25.8,Seca Severa
+Brasil,2016,Cana-de-Açúcar,68235.4,1180,-1.9,25.8,Seca Severa
+Mexico,2016,Maíz Blanco,3391.0,635,-0.25,22.36,Normal
+Mexico,2016,Maíz Amarillo,4149.6,635,-0.25,22.36,Normal
+Mexico,2016,Frijol,796.3,635,-0.25,22.36,Normal
+Mexico,2016,Café,1177.5,635,-0.25,22.36,Normal
+Mexico,2016,Caña de Azúcar,75487.0,635,-0.25,22.36,Normal
+Brasil,2017,Soja,3181.6,1490,0.1,25.41,Normal
+Brasil,2017,Milho 1ª Safra,4330.8,1490,0.1,25.41,Normal
+Brasil,2017,Milho 2ª Safra,4176.1,1490,0.1,25.41,Normal
+Brasil,2017,Café,1531.9,1490,0.1,25.41,Normal
+Brasil,2017,Cana-de-Açúcar,73264.5,1490,0.1,25.41,Normal
+Mexico,2017,Maíz Blanco,3480.0,705,0.0,22.59,Normal
+Mexico,2017,Maíz Amarillo,4250.0,705,0.0,22.59,Normal
+Mexico,2017,Frijol,820.0,705,0.0,22.59,Normal
+Mexico,2017,Café,1205.0,705,0.0,22.59,Normal
+Mexico,2017,Caña de Azúcar,76250.0,705,0.0,22.59,Normal
+Brasil,2018,Soja,3277.4,1610,0.4,25.24,Normal
+Brasil,2018,Milho 1ª Safra,4474.9,1610,0.4,25.24,Normal
+Brasil,2018,Milho 2ª Safra,4356.9,1610,0.4,25.24,Normal
+Brasil,2018,Café,1577.9,1610,0.4,25.24,Normal
+Brasil,2018,Cana-de-Açúcar,74060.6,1610,0.4,25.24,Normal
+Mexico,2018,Maíz Blanco,3570.2,775,0.25,22.43,Normal
+Mexico,2018,Maíz Amarillo,4351.6,775,0.25,22.43,Normal
+Mexico,2018,Frijol,844.0,775,0.25,22.43,Normal
+Mexico,2018,Café,1232.8,775,0.25,22.43,Normal
+Mexico,2018,Caña de Azúcar,77016.4,775,0.25,22.43,Normal
+Brasil,2019,Soja,3220.8,1730,-0.2,25.47,Normal
+Brasil,2019,Milho 1ª Safra,4381.8,1730,-0.2,25.47,Normal
+Brasil,2019,Milho 2ª Safra,4250.3,1730,-0.2,25.47,Normal
+Brasil,2019,Café,1560.8,1730,-0.2,25.47,Normal
+Brasil,2019,Cana-de-Açúcar,73368.4,1730,-0.2,25.47,Normal
+Mexico,2019,Maíz Blanco,3509.3,845,-0.25,22.66,Normal
+Mexico,2019,Maíz Amarillo,4297.8,845,-0.25,22.66,Normal
+Mexico,2019,Frijol,825.8,845,-0.25,22.66,Normal
+Mexico,2019,Café,1222.0,845,-0.25,22.66,Normal
+Mexico,2019,Caña de Azúcar,76231.9,845,-0.25,22.66,Normal
+Brasil,2020,Soja,3317.3,1370,0.1,25.3,Normal
+Brasil,2020,Milho 1ª Safra,4527.0,1370,0.1,25.3,Normal
+Brasil,2020,Milho 2ª Safra,4433.0,1370,0.1,25.3,Normal
+Brasil,2020,Café,1607.2,1370,0.1,25.3,Normal
+Brasil,2020,Cana-de-Açúcar,74166.5,1370,0.1,25.3,Normal
+Mexico,2020,Maíz Blanco,2943.4,560,-2.0,23.0,Seca Severa
+Mexico,2020,Maíz Amarillo,3724.2,560,-2.0,23.0,Seca Severa
+Mexico,2020,Frijol,666.4,560,-2.0,23.0,Seca Severa
+Mexico,2020,Café,1082.0,560,-2.0,23.0,Seca Severa
+Mexico,2020,Caña de Azúcar,70347.2,560,-2.0,23.0,Seca Severa
+Brasil,2021,Soja,2752.6,1080,-2.3,25.5,Seca Severa
+Brasil,2021,Milho 1ª Safra,3641.0,1080,-2.3,25.5,Seca Severa
+Brasil,2021,Milho 2ª Safra,3350.3,1080,-2.3,25.5,Seca Severa
+Brasil,2021,Café,1378.3,1080,-2.3,25.5,Seca Severa
+Brasil,2021,Cana-de-Açúcar,68660.6,1080,-2.3,25.5,Seca Severa
+Mexico,2021,Maíz Blanco,2810.1,490,-2.5,23.2,Seca Severa
+Mexico,2021,Maíz Amarillo,3595.6,490,-2.5,23.2,Seca Severa
+Mexico,2021,Frijol,627.8,490,-2.5,23.2,Seca Severa
+Mexico,2021,Café,1052.5,490,-2.5,23.2,Seca Severa
+Mexico,2021,Caña de Azúcar,68907.0,490,-2.5,23.2,Seca Severa
+Brasil,2022,Soja,2867.9,1140,-2.0,25.4,Seca Severa
+Brasil,2022,Milho 1ª Safra,3815.1,1140,-2.0,25.4,Seca Severa
+Brasil,2022,Milho 2ª Safra,3564.6,1140,-2.0,25.4,Seca Severa
+Brasil,2022,Café,1432.2,1140,-2.0,25.4,Seca Severa
+Brasil,2022,Cana-de-Açúcar,69676.4,1140,-2.0,25.4,Seca Severa
+Mexico,2022,Maíz Blanco,2941.6,530,-2.2,23.1,Seca Severa
+Mexico,2022,Maíz Amarillo,3739.7,530,-2.2,23.1,Seca Severa
+Mexico,2022,Frijol,663.3,530,-2.2,23.1,Seca Severa
+Mexico,2022,Café,1090.8,530,-2.2,23.1,Seca Severa
+Mexico,2022,Caña de Azúcar,70134.4,530,-2.2,23.1,Seca Severa
+Brasil,2023,Soja,3453.0,1730,0.1,25.59,Normal
+Brasil,2023,Milho 1ª Safra,4723.2,1730,0.1,25.59,Normal
+Brasil,2023,Milho 2ª Safra,4689.9,1730,0.1,25.59,Normal
+Brasil,2023,Café,1682.5,1730,0.1,25.59,Normal
+Brasil,2023,Cana-de-Açúcar,75068.5,1730,0.1,25.59,Normal
+Mexico,2023,Maíz Blanco,3720.0,845,0.0,22.8,Normal
+Mexico,2023,Maíz Amarillo,4550.0,845,0.0,22.8,Normal
+Mexico,2023,Frijol,880.0,845,0.0,22.8,Normal
+Mexico,2023,Café,1295.0,845,0.0,22.8,Normal
+Mexico,2023,Caña de Azúcar,77750.0,845,0.0,22.8,Normal
+Brasil,2024,Soja,3553.1,1370,0.4,25.42,Normal
+Brasil,2024,Milho 1ª Safra,4874.2,1370,0.4,25.42,Normal
+Brasil,2024,Milho 2ª Safra,4882.2,1370,0.4,25.42,Normal
+Brasil,2024,Café,1730.6,1370,0.4,25.42,Normal
+Brasil,2024,Cana-de-Açúcar,75876.8,1370,0.4,25.42,Normal
+Mexico,2024,Maíz Blanco,3813.6,635,0.25,22.64,Normal
+Mexico,2024,Maíz Amarillo,4655.2,635,0.25,22.64,Normal
+Mexico,2024,Frijol,905.0,635,0.25,22.64,Normal
+Mexico,2024,Café,1323.8,635,0.25,22.64,Normal
+Mexico,2024,Caña de Azúcar,78526.5,635,0.25,22.64,Normal
